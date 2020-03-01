@@ -1,0 +1,5 @@
+  712  avr-gcc -Wl,-u,vfprintf -Os -lprintf_flt -lm -mmcu=atmega8 main.c -o main.bin
+  713  avr-objcopy -O ihex main.bin main.hex
+  714  avrdude -c usbasp -p m8 -U flash:w:main.hex
+
+
